@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="is">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Keilusjoppan | Keiluvörur á Íslandi</title>
+  <meta name="description" content="Keilusjoppan – keilukúlur, skór, töskur og fylgihlutir. Sjáðu hvað er til á lager.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#">KEILUSJOPPAN</a>
+    <nav>
+      <a href="#vorur">Vörur</a>
+      <a href="#um-okkur">Um okkur</a>
+      <a href="#hafa-samband">Hafa samband</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">ALLT FYRIR KEILUNA</p>
+        <h1>Keiluvörur fyrir byrjendur og lengra komna</h1>
+        <p>Skoðaðu úrvalið og sjáðu strax hvaða vörur eru til á lager.</p>
+        <a class="button" href="#vorur">Skoða vörur</a>
+      </div>
+      <div class="hero-ball" aria-hidden="true">🎳</div>
+    </section>
+
+    <section id="vorur" class="products-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">VÖRUR</p>
+          <h2>Hvað ertu að leita að?</h2>
+        </div>
+        <label class="stock-only">
+          <input id="stockOnly" type="checkbox">
+          Sýna aðeins vörur á lager
+        </label>
+      </div>
+
+      <div id="filters" class="filters"></div>
+      <div id="productGrid" class="product-grid"></div>
+    </section>
+
+    <section id="um-okkur" class="info-section">
+      <p class="eyebrow">KEILUSJOPPAN</p>
+      <h2>Keiluvörur á einum stað</h2>
+      <p>Hér getur komið stuttur texti um Keilusjoppuna, þjónustuna og hvernig hægt er að panta eða sækja vörur.</p>
+    </section>
+
+    <section id="hafa-samband" class="contact-section">
+      <p class="eyebrow">HAFÐU SAMBAND</p>
+      <h2>Spurning um vöru?</h2>
+      <p>Settu inn símanúmer, netfang, Instagram eða aðrar upplýsingar hér.</p>
+    </section>
+  </main>
+
+  <footer>
+    <span>© <span id="year"></span> Keilusjoppan</span>
+    <span>Keiluvörur á Íslandi</span>
+  </footer>
+
+  <script src="products.js"></script>
+</body>
+</html>
