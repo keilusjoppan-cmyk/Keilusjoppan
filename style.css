@@ -48,3 +48,18 @@
     object-position: 65% center;
   }
 }
+.hero {
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(15,15,15,0.96) 0%,
+      rgba(15,15,15,0.85) 38%,
+      rgba(15,15,15,0.25) 70%,
+      rgba(15,15,15,0.05) 100%
+    ),
+    url("./keilusjoppan-hero.png") !important;
+
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
