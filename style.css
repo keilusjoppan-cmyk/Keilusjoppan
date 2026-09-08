@@ -63,3 +63,53 @@
   background-position: center !important;
   background-repeat: no-repeat !important;
 }
+/* KEILUKÚLUR – VÖRUFLOKKAKORT */
+
+.category-balls {
+  position: relative;
+  overflow: hidden;
+  min-height: 300px;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(10,10,10,0.92) 0%,
+      rgba(10,10,10,0.72) 45%,
+      rgba(10,10,10,0.15) 100%
+    ),
+    url("keilukulur-category.png");
+
+  background-size: cover;
+  background-position: center;
+  color: white !important;
+}
+
+.category-balls .category-number {
+  position: relative;
+  z-index: 2;
+  color: #ef382c;
+  font-weight: 900;
+}
+
+.category-balls .category-content {
+  position: relative;
+  z-index: 2;
+  margin-top: 45px;
+}
+
+.category-balls h3 {
+  margin: 0 0 10px;
+  font-size: 30px;
+  color: white;
+}
+
+.category-balls p {
+  margin: 0 0 22px;
+  max-width: 230px;
+  line-height: 1.5;
+}
+
+.category-balls .category-link {
+  color: #ef382c;
+  font-size: 12px;
+  font-weight: 900;
+}
