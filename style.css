@@ -309,3 +309,53 @@
   color: #111;
   transform: translateY(-2px);
 }
+/* =========================
+   DRAUMAKÚLAN – CTA
+   ========================= */
+
+.ball-order-cta {
+  background: #111;
+  color: #fff;
+  padding: 90px 8vw 100px;
+}
+
+.ball-order-cta h2 {
+  max-width: 900px;
+  margin: 16px 0 25px;
+  font-size: clamp(42px, 6vw, 78px);
+  line-height: .95;
+  letter-spacing: -.045em;
+}
+
+.ball-order-text {
+  max-width: 600px;
+  margin: 0 0 32px;
+  color: #bbb;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.ball-order-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 17px 25px;
+  border: 2px solid #ef382c;
+  color: #fff;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .08em;
+  transition: background .2s ease, transform .2s ease;
+}
+
+.ball-order-button:hover {
+  background: #ef382c;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 520px) {
+  .ball-order-cta {
+    padding: 65px 22px 75px;
+  }
+}
