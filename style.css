@@ -180,3 +180,110 @@
     font-size: 52px;
   }
 }
+/* =========================
+   VÖRUKORT – KEILUKÚLUR
+   ========================= */
+
+.product-card {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  overflow: hidden;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 35px rgba(0,0,0,.08);
+}
+
+.product-image {
+  position: relative;
+  height: 330px;
+  background: #f4f3f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 78%;
+  height: 78%;
+  object-fit: contain;
+}
+
+.product-badge {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  z-index: 2;
+
+  background: #ef382c;
+  color: #fff;
+
+  padding: 8px 11px;
+
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .08em;
+}
+
+.product-info {
+  padding: 24px;
+}
+
+.product-brand {
+  display: block;
+  color: #ef382c;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .12em;
+  margin-bottom: 8px;
+}
+
+.product-info h3 {
+  margin: 0 0 12px;
+  font-size: 25px;
+}
+
+.product-description {
+  margin: 0 0 20px;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.product-details {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+}
+
+.product-details span {
+  background: #f1f1f1;
+  padding: 7px 10px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.product-button {
+  display: inline-block;
+  color: #111;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .06em;
+  border-bottom: 2px solid #ef382c;
+  padding-bottom: 4px;
+}
+
+.product-button:hover {
+  color: #ef382c;
+}
+
+@media (max-width: 520px) {
+  .product-image {
+    height: 290px;
+  }
+}
