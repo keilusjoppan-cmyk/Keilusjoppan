@@ -373,3 +373,22 @@
   font-weight: 900;
   letter-spacing: .08em;
 }
+/* KEILUSKÓR – 4 VÖRUR Í RÖÐ */
+
+.shoe-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 1000px) {
+  .shoe-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .shoe-grid {
+    grid-template-columns: 1fr;
+  }
+}
