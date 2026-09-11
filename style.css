@@ -401,3 +401,23 @@
     grid-template-columns: 1fr !important;
   }
 }
+/* KEILUSKÓR – MYND Á FORSÍÐU */
+
+.category-shoes {
+  background:
+    linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.65)),
+    url("keiluskór-category.png") center/cover no-repeat;
+  color: #fff;
+}
+
+.category-shoes .category-number {
+  color: #ef382c;
+}
+
+.category-shoes .category-content p {
+  color: #fff;
+}
+
+.category-shoes .category-link {
+  color: #ef382c;
+}
