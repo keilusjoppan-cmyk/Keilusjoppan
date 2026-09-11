@@ -359,3 +359,17 @@
     padding: 65px 22px 75px;
   }
 }
+/* KEILUSKÓR – FLOKKAR */
+
+.shoe-category-heading {
+  margin: 10px 0 28px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #111;
+}
+
+.shoe-category-heading h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: .08em;
+}
