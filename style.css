@@ -403,10 +403,13 @@
 }
 /* KEILUSKÓR – MYND Á FORSÍÐU */
 
-.category-shoes {
-  background:
-    linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.65)),
-    url("keiluskór-category.png") center/cover no-repeat;
+.cats .category-shoes {
+  background-image:
+    linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.72)),
+    url("keiluskór-category.png") !important;
+  background-size: cover !important;
+  background-position: 65% center !important;
+  background-repeat: no-repeat !important;
   color: #fff;
 }
 
