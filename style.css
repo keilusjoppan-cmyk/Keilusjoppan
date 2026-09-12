@@ -478,3 +478,56 @@ html {
     width: 100%;
   }
 }
+/* MYNDAKORT Á FORSÍÐU */
+
+.category-balls,
+.category-shoes {
+  position: relative;
+  color: #fff;
+}
+
+.category-balls::before,
+.category-shoes::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.42);
+  z-index: 0;
+}
+
+.category-balls > *,
+.category-shoes > * {
+  position: relative;
+  z-index: 1;
+}
+
+.category-balls .category-content,
+.category-shoes .category-content {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 22px;
+}
+
+.category-balls .category-content h3,
+.category-shoes .category-content h3 {
+  margin: 0 0 10px;
+  color: #fff;
+  font-size: 30px;
+  line-height: 1;
+}
+
+.category-balls .category-content p,
+.category-shoes .category-content p {
+  margin: 0 0 18px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+.category-balls .category-link,
+.category-shoes .category-link {
+  color: #ef382c;
+  font-size: 12px;
+  font-weight: 900;
+}
