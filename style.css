@@ -72,9 +72,9 @@
   background:
  linear-gradient(
   90deg,
-  rgba(10,10,10,.55) 0%,
-  rgba(10,10,10,.30) 50%,
-  rgba(10,10,10,.08) 100%
+ rgba(10,10,10,.38) 0%,
+rgba(10,10,10,.18) 50%,
+rgba(10,10,10,.04) 100%
 )
     url("keilukulur-category.png");
 
@@ -547,9 +547,9 @@ html {
   background-image:
     linear-gradient(
       90deg,
-      rgba(10,10,10,.72) 0%,
-      rgba(10,10,10,.48) 50%,
-      rgba(10,10,10,.18) 100%
+rgba(10,10,10,.38) 0%,
+rgba(10,10,10,.18) 50%,
+rgba(10,10,10,.04) 100%
     ),
     url("keilukulur-category.png") !important;
 
