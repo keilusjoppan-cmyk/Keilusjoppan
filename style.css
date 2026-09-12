@@ -687,3 +687,70 @@ rgba(0,0,0,.01) 100%
   background: #d92b20;
   transform: translateY(-2px);
 }
+/* FORSÍÐA – FYLGIHLUTIR */
+
+.cats .category-accessories {
+  position: relative;
+  overflow: hidden;
+  min-height: 300px;
+  color: #fff !important;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,.20) 0%,
+      rgba(0,0,0,.08) 45%,
+      rgba(0,0,0,.01) 100%
+    ),
+    url("fylgihlutir-category.png") !important;
+
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+.cats .category-accessories .category-number {
+  position: relative;
+  z-index: 2;
+  color: #ef382c !important;
+  font-weight: 900;
+}
+
+.cats .category-accessories .category-content {
+  position: relative;
+  z-index: 2;
+  margin-top: 23px;
+}
+
+.cats .category-accessories h3 {
+  margin: 0 0 12px;
+  color: #fff !important;
+  font-size: 30px;
+  line-height: 1;
+}
+
+.cats .category-accessories p {
+  margin: 0 0 20px;
+  color: #fff !important;
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+.cats .category-accessories .category-link {
+  display: inline-block;
+  width: fit-content;
+  background: #ef382c;
+  color: #fff !important;
+  padding: 11px 15px;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .04em;
+  line-height: 1;
+  text-decoration: none;
+  transition: background .2s ease, transform .2s ease;
+}
+
+.cats .category-accessories:hover .category-link {
+  background: #d92b20;
+  transform: translateY(-2px);
+}
