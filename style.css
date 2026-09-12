@@ -531,3 +531,78 @@ html {
   font-size: 12px;
   font-weight: 900;
 }
+/* FORSÍÐA – KEILUKÚLUR + KEILUSKÓR SAMRÆMD KORT */
+
+.cats .category-balls,
+.cats .category-shoes {
+  position: relative;
+  overflow: hidden;
+  min-height: 300px;
+  color: #fff !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+.cats .category-balls {
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(10,10,10,.72) 0%,
+      rgba(10,10,10,.48) 50%,
+      rgba(10,10,10,.18) 100%
+    ),
+    url("keilukulur-category.png") !important;
+
+  background-position: center !important;
+}
+
+.cats .category-shoes {
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(10,10,10,.68) 0%,
+      rgba(10,10,10,.42) 50%,
+      rgba(10,10,10,.15) 100%
+    ),
+    url("keiluskor-category.png") !important;
+
+  background-position: 65% center !important;
+}
+
+.cats .category-balls .category-number,
+.cats .category-shoes .category-number {
+  position: relative;
+  z-index: 2;
+  color: #ef382c !important;
+  font-weight: 900;
+}
+
+.cats .category-balls .category-content,
+.cats .category-shoes .category-content {
+  position: relative;
+  z-index: 2;
+  margin-top: 45px;
+}
+
+.cats .category-balls h3,
+.cats .category-shoes h3 {
+  margin: 0 0 12px;
+  color: #fff !important;
+  font-size: 30px;
+  line-height: 1;
+}
+
+.cats .category-balls p,
+.cats .category-shoes p {
+  margin: 0 0 20px;
+  color: #fff !important;
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+.cats .category-balls .category-link,
+.cats .category-shoes .category-link {
+  color: #ef382c !important;
+  font-size: 12px;
+  font-weight: 900;
+}
