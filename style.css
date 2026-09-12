@@ -975,3 +975,94 @@ header .brand img {
   height: auto;
   max-width: 205px;
 }
+/* UM OKKUR – HERO MEÐ TEXTA YFIR MYND */
+
+.about-hero {
+  position: relative;
+  min-height: 690px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  background-image: url("hafthor-hardarson.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.about-hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,.88) 0%,
+      rgba(0,0,0,.72) 36%,
+      rgba(0,0,0,.30) 62%,
+      rgba(0,0,0,.08) 100%
+    );
+}
+
+.about-hero-content {
+  position: relative;
+  z-index: 2;
+
+  width: min(650px, 48vw);
+  margin-left: 7vw;
+  padding: 90px 0;
+
+  color: #fff;
+}
+
+.about-hero-content h1 {
+  margin: 16px 0 28px;
+
+  font-size: clamp(48px, 5.6vw, 82px);
+  line-height: .96;
+  letter-spacing: -.045em;
+}
+
+.about-hero-content h1 span {
+  color: #ef382c;
+}
+
+.about-lead {
+  max-width: 520px;
+  margin: 0;
+
+  color: #ddd;
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+
+/* SÍMI */
+
+@media (max-width: 800px) {
+
+  .about-hero {
+    min-height: 620px;
+    background-position: 62% center;
+  }
+
+  .about-hero-overlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(0,0,0,.90) 0%,
+        rgba(0,0,0,.72) 62%,
+        rgba(0,0,0,.25) 100%
+      );
+  }
+
+  .about-hero-content {
+    width: auto;
+    margin: 0;
+    padding: 70px 22px;
+  }
+
+  .about-hero-content h1 {
+    font-size: 48px;
+  }
+}
