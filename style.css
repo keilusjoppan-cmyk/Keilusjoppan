@@ -558,12 +558,12 @@ rgba(10,10,10,.04) 100%
 
 .cats .category-shoes {
   background-image:
-linear-gradient(
-  90deg,
-  rgba(10,10,10,.50) 0%,
-  rgba(10,10,10,.25) 50%,
-  rgba(10,10,10,.06) 100%
-)
+    linear-gradient(
+      90deg,
+      rgba(10,10,10,.34) 0%,
+      rgba(10,10,10,.14) 50%,
+      rgba(10,10,10,.03) 100%
+    ),
     url("keiluskor-category.png") !important;
 
   background-position: 65% center !important;
