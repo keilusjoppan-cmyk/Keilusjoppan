@@ -406,7 +406,7 @@
 .cats .category-shoes {
   background-image:
     linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.72)),
-    url("keiluskór-category.png") !important;
+    url("keiluskor-category.png") !important;
   background-size: cover !important;
   background-position: 65% center !important;
   background-repeat: no-repeat !important;
