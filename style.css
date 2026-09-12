@@ -1066,3 +1066,110 @@ header .brand img {
     font-size: 48px;
   }
 }
+/* =========================
+   FORSÍÐA – UM OKKUR
+========================= */
+
+.home-about {
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  min-height: 520px;
+  background: #111;
+  color: #fff;
+}
+
+.home-about-image {
+  position: relative;
+  min-height: 520px;
+  overflow: hidden;
+}
+
+.home-about-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Létt dökkt overlay yfir myndina */
+.home-about-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,.08) 0%,
+      rgba(0,0,0,.02) 60%,
+      rgba(0,0,0,.35) 100%
+    );
+}
+
+.home-about-content {
+  padding: 75px 7vw 75px 6vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home-about-content h2 {
+  margin: 12px 0 25px;
+  font-size: clamp(48px, 5vw, 72px);
+  line-height: .95;
+  letter-spacing: -.045em;
+}
+
+.home-about-content > p:not(.eyebrow) {
+  max-width: 560px;
+  margin: 0 0 32px;
+  color: #c8c8c8;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.home-about-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+
+  padding: 16px 21px;
+
+  background: #ef382c;
+  color: #fff !important;
+
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .07em;
+
+  transition: transform .2s ease, background .2s ease;
+}
+
+.home-about-button:hover {
+  background: #d92b20;
+  transform: translateY(-2px);
+}
+
+
+/* SÍMI */
+
+@media (max-width: 800px) {
+
+  .home-about {
+    grid-template-columns: 1fr;
+  }
+
+  .home-about-image {
+    min-height: 350px;
+  }
+
+  .home-about-content {
+    padding: 60px 22px 65px;
+  }
+
+  .home-about-content h2 {
+    font-size: 50px;
+  }
+}
