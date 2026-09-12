@@ -70,12 +70,12 @@
   overflow: hidden;
   min-height: 300px;
   background:
-    linear-gradient(
-      90deg,
-      rgba(10,10,10,0.92) 0%,
-      rgba(10,10,10,0.72) 45%,
-      rgba(10,10,10,0.15) 100%
-    ),
+ linear-gradient(
+  90deg,
+  rgba(10,10,10,.55) 0%,
+  rgba(10,10,10,.30) 50%,
+  rgba(10,10,10,.08) 100%
+)
     url("keilukulur-category.png");
 
   background-size: cover;
@@ -558,12 +558,12 @@ html {
 
 .cats .category-shoes {
   background-image:
-    linear-gradient(
-      90deg,
-      rgba(10,10,10,.68) 0%,
-      rgba(10,10,10,.42) 50%,
-      rgba(10,10,10,.15) 100%
-    ),
+linear-gradient(
+  90deg,
+  rgba(10,10,10,.50) 0%,
+  rgba(10,10,10,.25) 50%,
+  rgba(10,10,10,.06) 100%
+)
     url("keiluskor-category.png") !important;
 
   background-position: 65% center !important;
