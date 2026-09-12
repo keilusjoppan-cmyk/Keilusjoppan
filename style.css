@@ -957,3 +957,21 @@ rgba(0,0,0,.01) 100%
     padding-bottom: 18px;
   }
 }
+/* UM OKKUR – HEADER LOGO FIX */
+
+.about-hero + * {
+  position: relative;
+}
+
+header .brand {
+  display: block;
+  width: 205px;
+  flex-shrink: 0;
+}
+
+header .brand img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 205px;
+}
