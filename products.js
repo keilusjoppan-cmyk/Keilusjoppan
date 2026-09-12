@@ -58,41 +58,9 @@ const products = [
 ];
 
 const grid = document.querySelector("#productGrid");
-const filters = document.querySelector("#filters");
-const stockOnly = document.querySelector("#stockOnly");
 
-let active = "Allt";
-
-function rf() {
-  let cs = ["Allt", ...new Set(products.map(p => p.category))];
-
-  filters.innerHTML = cs
-    .map(c => `
-      <button
-        class="filter-btn ${active === c ? "active" : ""}"
-        data-c="${c}">
-        ${c}
-      </button>
-    `)
-    .join("");
-
-  document.querySelectorAll(".filter-btn").forEach(b => {
-    b.onclick = () => {
-      active = b.dataset.c;
-      rf();
-      rp();
-    };
-  });
-}
-
-function rp() {
-  let ps = products.filter(
-    p =>
-      (active === "Allt" || p.category === active) &&
-      (!stockOnly.checked || p.inStock)
-  );
-
-  grid.innerHTML = ps
+if (grid) {
+  grid.innerHTML = products
     .map(p => `
       <article class="product-card">
 
@@ -115,15 +83,14 @@ function rp() {
           <div class="price">${p.price}</div>
 
         </div>
+
       </article>
     `)
     .join("");
 }
 
-stockOnly.onchange = rp;
+const year = document.querySelector("#year");
 
-document.querySelector("#year").textContent =
-  new Date().getFullYear();
-
-rf();
-rp();
+if (year) {
+  year.textContent = new Date().getFullYear();
+}
