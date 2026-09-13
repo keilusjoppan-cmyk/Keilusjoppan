@@ -60,7 +60,7 @@
     url("./keilusjoppan-hero.png") !important;
 
   background-size: cover !important;
-  background-position: center !important;
+  background-position: center 35%; !important;
   background-repeat: no-repeat !important;
 }
 /* KEILUKÚLUR – VÖRUFLOKKAKORT */
