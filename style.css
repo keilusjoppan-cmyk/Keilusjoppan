@@ -60,7 +60,7 @@
     url("./keilusjoppan-hero.png") !important;
 
   background-size: cover !important;
-  background-position: center 35%; !important;
+  background-position: center; !important;
   background-repeat: no-repeat !important;
 }
 /* KEILUKÚLUR – VÖRUFLOKKAKORT */
@@ -986,7 +986,7 @@ header .brand img {
 
   background-image: url("hafthor-hardarson.png");
   background-size: cover;
-  background-position: center;
+  background-position: center 35%;
   background-repeat: no-repeat;
 }
 
