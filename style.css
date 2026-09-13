@@ -1173,3 +1173,19 @@ header .brand img {
     font-size: 50px;
   }
 }
+/* UM OKKUR – HAFÞÓR FYRIRSÖGN */
+
+.about-story-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.about-story-title .eyebrow {
+  text-align: center;
+}
+
+.about-story-title h2 {
+  text-align: center;
+}
