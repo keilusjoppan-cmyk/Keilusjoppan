@@ -57,7 +57,7 @@
       rgba(15,15,15,0.25) 70%,
       rgba(15,15,15,0.05) 100%
     ),
-    url("./keilusjoppan-hero.png") !important;
+    url("./keilusjoppan-hero.webp") !important;
 
   background-size: cover !important;
   background-position: center; !important;
