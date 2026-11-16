@@ -1,10 +1,387 @@
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f3f1ec;color:#111;font-family:Arial,sans-serif}a{color:inherit}header{height:76px;padding:0 7vw;display:flex;align-items:center;justify-content:space-between;background:#fff;position:sticky;top:0;z-index:9;border-bottom:1px solid #ddd}.logo{text-decoration:none;font-weight:900;font-style:italic;font-size:23px;letter-spacing:-1.5px}.logo b{color:#e21c2a}nav{display:flex;gap:28px}nav a{text-decoration:none;font-size:13px;font-weight:bold}.hero{min-height:610px;padding:80px 8vw;display:grid;grid-template-columns:1.3fr .7fr;align-items:center;background:#111;color:#fff;overflow:hidden}.eyebrow{color:#e21c2a;font-size:11px;font-weight:900;letter-spacing:.2em}.hero h1,.contact h2{font-size:clamp(54px,8vw,108px);line-height:.86;letter-spacing:-.06em;margin:18px 0}.hero em,.contact em{font-style:normal;color:#e21c2a}.lead{max-width:570px;color:#bbb;font-size:18px;line-height:1.6;margin-bottom:30px}.button{display:inline-block;padding:15px 22px;background:#e21c2a;color:#fff;text-decoration:none;font-size:12px;font-weight:900}.mark{height:360px;position:relative;display:grid;place-items:center}.ball{width:245px;height:245px;border-radius:50%;background:#050505;border:7px solid #e21c2a;z-index:2;position:relative}.ball i{position:absolute;width:30px;height:30px;border-radius:50%;background:#fff}.ball i:nth-child(1){top:55px;left:72px}.ball i:nth-child(2){top:60px;right:64px}.ball i:nth-child(3){top:108px;left:99px}.flame{position:absolute;color:#e21c2a;font-size:340px;transform:scaleX(.68) translateY(-60px)}.section{padding:90px 8vw}.section h2,.about h2{font-size:clamp(38px,5vw,66px);letter-spacing:-.05em;line-height:.95;margin:12px 0}.cats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:45px;border-top:1px solid #bbb;border-bottom:1px solid #bbb}.cats a{min-height:220px;padding:25px 20px;border-right:1px solid #bbb;text-decoration:none;color:#777}.cats a:first-child{border-left:1px solid #bbb}.cats a:hover{background:#e21c2a;color:#fff}.cats b{display:block;font-size:23px;color:#111;margin:38px 0 12px}.cats a:hover b{color:#fff}.cats small{display:block;line-height:1.5}.white{background:#fff}.row{display:flex;justify-content:space-between;align-items:end;gap:20px}.filters{display:flex;gap:8px;flex-wrap:wrap;margin:30px 0 22px}.filter-btn{padding:9px 14px;border:1px solid #ccc;background:#fff;font-weight:bold;cursor:pointer}.filter-btn.active{background:#111;color:#fff}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.product-card{border:1px solid #ddd;background:#fff}.product-image{aspect-ratio:1;background:#f0efec;display:grid;place-items:center;font-size:65px}.product-image img{width:100%;height:100%;object-fit:contain}.product-body{padding:16px}.product-meta{display:flex;justify-content:space-between;gap:8px;font-size:11px}.stock.in{color:#187c42}.stock.out{color:#888}.product-card h3{margin:15px 0 8px}.price{font-weight:900}.about{padding:95px 8vw;background:#e21c2a;color:#fff;display:grid;grid-template-columns:1fr 1fr;gap:70px}.about>p{font-size:18px;line-height:1.8}.pale{color:#fff}.contact{min-height:500px}.contact p:not(.eyebrow){color:#666}footer{padding:35px 8vw;background:#111;color:#888;display:flex;justify-content:space-between;align-items:center;font-size:10px;letter-spacing:.12em}footer .logo span{color:#fff}@media(max-width:850px){nav{display:none}.hero{grid-template-columns:1fr}.mark{height:300px}.cats,.grid{grid-template-columns:repeat(2,1fr)}.about{grid-template-columns:1fr}}@media(max-width:520px){.hero,.section,.about{padding-left:22px;padding-right:22px}.hero h1{font-size:53px}.cats,.grid{grid-template-columns:1fr}.row{align-items:start;flex-direction:column}footer{flex-direction:column;align-items:start;gap:18px}}.logo img {
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #f3f1ec;
+  color: #111;
+  font-family: Arial,sans-serif;
+}
+
+a {
+  color: inherit;
+}
+
+header {
+  height: 76px;
+  padding: 0 7vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 9;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  text-decoration: none;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 23px;
+  letter-spacing: -1.5px;
+}
+
+.logo b {
+  color: #e21c2a;
+}
+
+nav {
+  display: flex;
+  gap: 28px;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.hero {
+  min-height: 610px;
+  padding: 80px 8vw;
+  display: grid;
+  grid-template-columns: 1.3fr .7fr;
+  align-items: center;
+  background: #111;
+  color: #fff;
+  overflow: hidden;
+}
+
+.eyebrow {
+  color: #e21c2a;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .2em;
+}
+
+.hero h1,.contact h2 {
+  font-size: clamp(54px,8vw,108px);
+  line-height: .86;
+  letter-spacing: -.06em;
+  margin: 18px 0;
+}
+
+.hero em,.contact em {
+  font-style: normal;
+  color: #e21c2a;
+}
+
+.lead {
+  max-width: 570px;
+  color: #bbb;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.button {
+  display: inline-block;
+  padding: 15px 22px;
+  background: #e21c2a;
+  color: #fff;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.mark {
+  height: 360px;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.ball {
+  width: 245px;
+  height: 245px;
+  border-radius: 50%;
+  background: #050505;
+  border: 7px solid #e21c2a;
+  z-index: 2;
+  position: relative;
+}
+
+.ball i {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.ball i:nth-child(1) {
+  top: 55px;
+  left: 72px;
+}
+
+.ball i:nth-child(2) {
+  top: 60px;
+  right: 64px;
+}
+
+.ball i:nth-child(3) {
+  top: 108px;
+  left: 99px;
+}
+
+.flame {
+  position: absolute;
+  color: #e21c2a;
+  font-size: 340px;
+  transform: scaleX(.68) translateY(-60px);
+}
+
+.section {
+  padding: 90px 8vw;
+}
+
+.section h2,.about h2 {
+  font-size: clamp(38px,5vw,66px);
+  letter-spacing: -.05em;
+  line-height: .95;
+  margin: 12px 0;
+}
+
+.cats {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  margin-top: 45px;
+  border-top: 1px solid #bbb;
+  border-bottom: 1px solid #bbb;
+}
+
+.cats a {
+  min-height: 220px;
+  padding: 25px 20px;
+  border-right: 1px solid #bbb;
+  text-decoration: none;
+  color: #777;
+}
+
+.cats a:first-child {
+  border-left: 1px solid #bbb;
+}
+
+.cats a:hover {
+  background: #e21c2a;
+  color: #fff;
+}
+
+.cats b {
+  display: block;
+  font-size: 23px;
+  color: #111;
+  margin: 38px 0 12px;
+}
+
+.cats a:hover b {
+  color: #fff;
+}
+
+.cats small {
+  display: block;
+  line-height: 1.5;
+}
+
+.white {
+  background: #fff;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 20px;
+}
+
+.filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 30px 0 22px;
+}
+
+.filter-btn {
+  padding: 9px 14px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.filter-btn.active {
+  background: #111;
+  color: #fff;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 18px;
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  background: #fff;
+}
+
+.product-image {
+  aspect-ratio: 1;
+  background: #f0efec;
+  display: grid;
+  place-items: center;
+  font-size: 65px;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.product-body {
+  padding: 16px;
+}
+
+.product-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 11px;
+}
+
+.stock.in {
+  color: #187c42;
+}
+
+.stock.out {
+  color: #888;
+}
+
+.product-card h3 {
+  margin: 15px 0 8px;
+}
+
+.price {
+  font-weight: 900;
+}
+
+.about {
+  padding: 95px 8vw;
+  background: #e21c2a;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+}
+
+.about>p {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.pale {
+  color: #fff;
+}
+
+.contact {
+  min-height: 500px;
+}
+
+.contact p:not(.eyebrow) {
+  color: #666;
+}
+
+footer {
+  padding: 35px 8vw;
+  background: #111;
+  color: #888;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 10px;
+  letter-spacing: .12em;
+}
+
+footer .logo span {
+  color: #fff;
+}
+
+@media (max-width:850px) {
+  nav {
+    display: none;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .mark {
+    height: 300px;
+  }
+
+  .cats,.grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width:520px) {
+  .hero,.section,.about {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .hero h1 {
+    font-size: 53px;
+  }
+
+  .cats,.grid {
+    grid-template-columns: 1fr;
+  }
+
+  .row {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: start;
+    gap: 18px;
+  }
+
+}
+
+.logo img {
   width: 150px;
   height: auto;
   display: block;
 }
-/* HERO MYND */
 
+
+/* HERO MYND */
 .hero {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
@@ -26,8 +403,8 @@
   display: block;
 }
 
-/* FARSÍMI */
 
+/* FARSÍMI */
 @media (max-width: 850px) {
   .hero {
     grid-template-columns: 1fr;
@@ -37,6 +414,7 @@
   .hero-visual {
     height: 350px;
   }
+
 }
 
 @media (max-width: 520px) {
@@ -47,37 +425,23 @@
   .hero-visual img {
     object-position: 65% center;
   }
-}
-.hero {
-  background-image:
-    linear-gradient(
-      90deg,
-      rgba(15,15,15,0.96) 0%,
-      rgba(15,15,15,0.85) 38%,
-      rgba(15,15,15,0.25) 70%,
-      rgba(15,15,15,0.05) 100%
-    ),
-    url("./keilusjoppan-hero.webp") !important;
 
+}
+
+.hero {
+  background-image: linear-gradient( 90deg, rgba(15,15,15,0.96) 0%, rgba(15,15,15,0.85) 38%, rgba(15,15,15,0.25) 70%, rgba(15,15,15,0.05) 100% ), url("./keilusjoppan-hero.webp") !important;
   background-size: cover !important;
-  background-position: center; !important;
+  background-position: center !important;
   background-repeat: no-repeat !important;
 }
-/* KEILUKÚLUR – VÖRUFLOKKAKORT */
 
+
+/* KEILUKÚLUR – VÖRUFLOKKAKORT */
 .category-balls {
   position: relative;
   overflow: hidden;
   min-height: 300px;
-  background:
- linear-gradient(
-  90deg,
- rgba(10,10,10,.38) 0%,
-rgba(10,10,10,.18) 50%,
-rgba(10,10,10,.04) 100%
-)
-    url("keilukulur-category.png");
-
+  background: linear-gradient( 90deg, rgba(10,10,10,.38) 0%, rgba(10,10,10,.18) 50%, rgba(10,10,10,.04) 100% ), url("keilukulur-category.png");
   background-size: cover;
   background-position: center;
   color: white !important;
@@ -113,10 +477,11 @@ rgba(10,10,10,.04) 100%
   font-size: 12px;
   font-weight: 900;
 }
+
+
 /* =========================
    KEILUKÚLUR – VÖRUSÍÐA
    ========================= */
-
 .balls-header {
   background: #111;
   color: #fff;
@@ -155,8 +520,8 @@ rgba(10,10,10,.04) 100%
   gap: 22px;
 }
 
-/* Farsímar */
 
+/* Farsímar */
 @media (max-width: 850px) {
   .balls-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -169,6 +534,7 @@ rgba(10,10,10,.04) 100%
   .balls-shop {
     padding: 60px 22px 80px;
   }
+
 }
 
 @media (max-width: 520px) {
@@ -179,11 +545,13 @@ rgba(10,10,10,.04) 100%
   .balls-header h1 {
     font-size: 52px;
   }
+
 }
+
+
 /* =========================
    VÖRUKORT – KEILUKÚLUR
    ========================= */
-
 .product-card {
   background: #fff;
   border: 1px solid #e5e5e5;
@@ -217,12 +585,9 @@ rgba(10,10,10,.04) 100%
   top: 18px;
   left: 18px;
   z-index: 2;
-
   background: #ef382c;
   color: #fff;
-
   padding: 8px 11px;
-
   font-size: 10px;
   font-weight: 900;
   letter-spacing: .08em;
@@ -286,9 +651,11 @@ rgba(10,10,10,.04) 100%
   .product-image {
     height: 290px;
   }
-}
-/* TAKKI – FINNDU ÞÍNA KÚLU */
 
+}
+
+
+/* TAKKI – FINNDU ÞÍNA KÚLU */
 .balls-catalog-link {
   display: inline-flex;
   align-items: center;
@@ -309,10 +676,11 @@ rgba(10,10,10,.04) 100%
   color: #111;
   transform: translateY(-2px);
 }
+
+
 /* =========================
    DRAUMAKÚLAN – CTA
    ========================= */
-
 .ball-order-cta {
   background: #111;
   color: #fff;
@@ -358,9 +726,11 @@ rgba(10,10,10,.04) 100%
   .ball-order-cta {
     padding: 65px 22px 75px;
   }
-}
-/* KEILUSKÓR – FLOKKAR */
 
+}
+
+
+/* KEILUSKÓR – FLOKKAR */
 .shoe-category-heading {
   margin: 10px 0 28px;
   padding-bottom: 12px;
@@ -373,8 +743,9 @@ rgba(10,10,10,.04) 100%
   font-weight: 900;
   letter-spacing: .08em;
 }
-/* KEILUSKÓR – 2 VÖRUR Í RÖÐ */
 
+
+/* KEILUSKÓR – 2 VÖRUR Í RÖÐ */
 .shoe-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -386,9 +757,11 @@ rgba(10,10,10,.04) 100%
   .shoe-grid {
     grid-template-columns: 1fr;
   }
-}
-/* KEILUSKÓR – 2 Í HVERJUM DÁLK */
 
+}
+
+
+/* KEILUSKÓR – 2 Í HVERJUM DÁLK */
 .balls-shop .shoe-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
@@ -400,13 +773,13 @@ rgba(10,10,10,.04) 100%
   .balls-shop .shoe-grid {
     grid-template-columns: 1fr !important;
   }
-}
-/* KEILUSKÓR – MYND Á FORSÍÐU */
 
+}
+
+
+/* KEILUSKÓR – MYND Á FORSÍÐU */
 .cats .category-shoes {
-  background-image:
-    linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.72)),
-    url("keiluskor-category.png") !important;
+  background-image: linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.72)), url("keiluskor-category.png") !important;
   background-size: cover !important;
   background-position: 65% center !important;
   background-repeat: no-repeat !important;
@@ -424,8 +797,9 @@ rgba(10,10,10,.04) 100%
 .category-shoes .category-link {
   color: #ef382c;
 }
-/* KEILUSKÓR – FLOKKATAKKAR */
 
+
+/* KEILUSKÓR – FLOKKATAKKAR */
 .shoe-nav {
   display: flex;
   gap: 10px;
@@ -477,9 +851,11 @@ html {
   .shoe-nav a {
     width: 100%;
   }
-}
-/* MYNDAKORT Á FORSÍÐU */
 
+}
+
+
+/* MYNDAKORT Á FORSÍÐU */
 .category-balls,
 .category-shoes {
   position: relative;
@@ -531,8 +907,9 @@ html {
   font-size: 12px;
   font-weight: 900;
 }
-/* FORSÍÐA – KEILUKÚLUR + KEILUSKÓR SAMRÆMD KORT */
 
+
+/* FORSÍÐA – KEILUKÚLUR + KEILUSKÓR SAMRÆMD KORT */
 .cats .category-balls,
 .cats .category-shoes {
   position: relative;
@@ -544,28 +921,12 @@ html {
 }
 
 .cats .category-balls {
-  background-image:
-    linear-gradient(
-      90deg,
-      rgba(0,0,0,.12) 0%,
-      rgba(0,0,0,.03) 45%,
-      rgba(0,0,0,0) 100%
-    ),
-    url("keilukulur-category.png") !important;
-
+  background-image: linear-gradient( 90deg, rgba(0,0,0,.12) 0%, rgba(0,0,0,.03) 45%, rgba(0,0,0,0) 100% ), url("keilukulur-category.png") !important;
   background-position: center !important;
 }
 
 .cats .category-shoes {
-  background-image:
-    linear-gradient(
-      90deg,
-      rgba(0,0,0,.10) 0%,
-      rgba(0,0,0,.02) 45%,
-      rgba(0,0,0,0) 100%
-    ),
-    url("keiluskor-category.png") !important;
-
+  background-image: linear-gradient( 90deg, rgba(0,0,0,.10) 0%, rgba(0,0,0,.02) 45%, rgba(0,0,0,0) 100% ), url("keiluskor-category.png") !important;
   background-position: 65% center !important;
 }
 
@@ -620,23 +981,15 @@ html {
   background: #d92b20;
   transform: translateY(-2px);
 }
-/* FORSÍÐA – KEILUTÖSKUR */
 
+
+/* FORSÍÐA – KEILUTÖSKUR */
 .cats .category-bags {
   position: relative;
   overflow: hidden;
   min-height: 300px;
   color: #fff !important;
-
-  background-image:
-    linear-gradient(
-      90deg,
-rgba(0,0,0,.20) 0%,
-rgba(0,0,0,.08) 45%,
-rgba(0,0,0,.01) 100%
-    ),
-    url("keilutoskur-category.png") !important;
-
+  background-image: linear-gradient( 90deg, rgba(0,0,0,.20) 0%, rgba(0,0,0,.08) 45%, rgba(0,0,0,.01) 100% ), url("keilutoskur-category.png") !important;
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
@@ -687,23 +1040,15 @@ rgba(0,0,0,.01) 100%
   background: #d92b20;
   transform: translateY(-2px);
 }
-/* FORSÍÐA – FYLGIHLUTIR */
 
+
+/* FORSÍÐA – FYLGIHLUTIR */
 .cats .category-accessories {
   position: relative;
   overflow: hidden;
   min-height: 300px;
   color: #fff !important;
-
-  background-image:
-    linear-gradient(
-      90deg,
-      rgba(0,0,0,.20) 0%,
-      rgba(0,0,0,.08) 45%,
-      rgba(0,0,0,.01) 100%
-    ),
-    url("fylgihlutir-category.png") !important;
-
+  background-image: linear-gradient( 90deg, rgba(0,0,0,.20) 0%, rgba(0,0,0,.08) 45%, rgba(0,0,0,.01) 100% ), url("fylgihlutir-category.png") !important;
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
@@ -754,10 +1099,11 @@ rgba(0,0,0,.01) 100%
   background: #d92b20;
   transform: translateY(-2px);
 }
+
+
 /* =========================
    UM OKKUR
 ========================= */
-
 .about-hero {
   display: grid;
   grid-template-columns: 1.05fr 1fr;
@@ -803,7 +1149,6 @@ rgba(0,0,0,.01) 100%
 
 
 /* SAGA HAFÞÓRS */
-
 .about-story {
   display: grid;
   grid-template-columns: .9fr 1.1fr;
@@ -836,7 +1181,6 @@ rgba(0,0,0,.01) 100%
 
 
 /* AFREK */
-
 .about-achievements {
   background: #111;
   color: #fff;
@@ -878,7 +1222,6 @@ rgba(0,0,0,.01) 100%
 
 
 /* FJÖLSKYLDUFYRIRTÆKI */
-
 .family-business {
   display: grid;
   grid-template-columns: .9fr 1.1fr;
@@ -907,9 +1250,7 @@ rgba(0,0,0,.01) 100%
 
 
 /* RESPONSIVE */
-
 @media (max-width: 900px) {
-
   .about-hero {
     grid-template-columns: 1fr;
   }
@@ -936,11 +1277,10 @@ rgba(0,0,0,.01) 100%
   .about-achievements {
     padding: 70px 22px;
   }
+
 }
 
-
 @media (max-width: 520px) {
-
   .about-hero-text h1 {
     font-size: 50px;
   }
@@ -956,9 +1296,11 @@ rgba(0,0,0,.01) 100%
   .achievement {
     padding-bottom: 18px;
   }
-}
-/* UM OKKUR – HEADER LOGO FIX */
 
+}
+
+
+/* UM OKKUR – HEADER LOGO FIX */
 .about-hero + * {
   position: relative;
 }
@@ -975,15 +1317,15 @@ header .brand img {
   height: auto;
   max-width: 205px;
 }
-/* UM OKKUR – HERO MEÐ TEXTA YFIR MYND */
 
+
+/* UM OKKUR – HERO MEÐ TEXTA YFIR MYND */
 .about-hero {
   position: relative;
   min-height: 690px;
   display: flex;
   align-items: center;
   overflow: hidden;
-
   background-image: url("hafthor-hardarson.png");
   background-size: cover;
   background-position: 15% 15%;
@@ -993,31 +1335,20 @@ header .brand img {
 .about-hero-overlay {
   position: absolute;
   inset: 0;
-
-  background:
-    linear-gradient(
-      90deg,
-      rgba(0,0,0,.88) 0%,
-      rgba(0,0,0,.72) 36%,
-      rgba(0,0,0,.30) 62%,
-      rgba(0,0,0,.08) 100%
-    );
+  background: linear-gradient( 90deg, rgba(0,0,0,.88) 0%, rgba(0,0,0,.72) 36%, rgba(0,0,0,.30) 62%, rgba(0,0,0,.08) 100% );
 }
 
 .about-hero-content {
   position: relative;
   z-index: 2;
-
   width: min(650px, 48vw);
   margin-left: 7vw;
   padding: 90px 0;
-
   color: #fff;
 }
 
 .about-hero-content h1 {
   margin: 16px 0 28px;
-
   font-size: clamp(48px, 5.6vw, 82px);
   line-height: .96;
   letter-spacing: -.045em;
@@ -1030,7 +1361,6 @@ header .brand img {
 .about-lead {
   max-width: 520px;
   margin: 0;
-
   color: #ddd;
   font-size: 18px;
   line-height: 1.65;
@@ -1038,22 +1368,14 @@ header .brand img {
 
 
 /* SÍMI */
-
 @media (max-width: 800px) {
-
   .about-hero {
     min-height: 620px;
     background-position: 62% center;
   }
 
   .about-hero-overlay {
-    background:
-      linear-gradient(
-        90deg,
-        rgba(0,0,0,.90) 0%,
-        rgba(0,0,0,.72) 62%,
-        rgba(0,0,0,.25) 100%
-      );
+    background: linear-gradient( 90deg, rgba(0,0,0,.90) 0%, rgba(0,0,0,.72) 62%, rgba(0,0,0,.25) 100% );
   }
 
   .about-hero-content {
@@ -1065,11 +1387,13 @@ header .brand img {
   .about-hero-content h1 {
     font-size: 48px;
   }
+
 }
+
+
 /* =========================
    FORSÍÐA – UM OKKUR
 ========================= */
-
 .home-about {
   display: grid;
   grid-template-columns: 1.05fr .95fr;
@@ -1092,18 +1416,13 @@ header .brand img {
   object-position: center;
 }
 
+
 /* Létt dökkt overlay yfir myndina */
 .home-about-image::after {
   content: "";
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(0,0,0,.08) 0%,
-      rgba(0,0,0,.02) 60%,
-      rgba(0,0,0,.35) 100%
-    );
+  background: linear-gradient( 90deg, rgba(0,0,0,.08) 0%, rgba(0,0,0,.02) 60%, rgba(0,0,0,.35) 100% );
 }
 
 .home-about-content {
@@ -1133,17 +1452,13 @@ header .brand img {
   align-items: center;
   justify-content: center;
   width: fit-content;
-
   padding: 16px 21px;
-
   background: #ef382c;
   color: #fff !important;
-
   text-decoration: none;
   font-size: 12px;
   font-weight: 900;
   letter-spacing: .07em;
-
   transition: transform .2s ease, background .2s ease;
 }
 
@@ -1154,9 +1469,7 @@ header .brand img {
 
 
 /* SÍMI */
-
 @media (max-width: 800px) {
-
   .home-about {
     grid-template-columns: 1fr;
   }
@@ -1172,47 +1485,11 @@ header .brand img {
   .home-about-content h2 {
     font-size: 50px;
   }
-}
-/* UM OKKUR – HAFÞÓR FYRIRSÖGN */
 
-.about-story-title {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
 }
 
-.about-story-title .eyebrow {
-  text-align: center;
-}
 
-.about-story-title h2 {
-  text-align: center;
-}
-/* UM OKKUR – HAFÞÓR TITILL */
-
-.about-story-title {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.about-story-title .eyebrow {
-  width: 100%;
-  margin-bottom: 18px;
-  text-align: center;
-}
-
-.about-story-title h2 {
-  margin: 0;
-  text-align: center;
-  font-size: clamp(48px, 5vw, 68px);
-  line-height: .95;
-}
 /* UM OKKUR – MIÐJA HAFÞÓR TITIL */
-
 .about-story-title {
   display: flex !important;
   flex-direction: column !important;
@@ -1233,6 +1510,9 @@ header .brand img {
   text-align: center !important;
   width: 100%;
 }
-.product-link {
+
+
+/* Vörutenglar faldir þar til verslunin er tilbúin */
+.product-button, .product-link {
   display: none !important;
 }
