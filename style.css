@@ -1233,3 +1233,6 @@ header .brand img {
   text-align: center !important;
   width: 100%;
 }
+.product-link {
+  display: none !important;
+}
