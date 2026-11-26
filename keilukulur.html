@@ -443,3 +443,45 @@
     adviceSection.append(row);
   }
 </script>
+<script>
+  (() => {
+    const weightsByBall = {
+      'Next Factor': '12–16',
+      'Perfect GEM': '12–16',
+      'Tropical Surge – Kiwi / Apple / Avocado': '10–16',
+      'Tropical Surge – Gold / Bronze / Medallion': '10–16',
+      'Hustle VP': '10–16',
+      '!Q Tour Sapphire': '12–16',
+      '!Q Tour 78/U': '12–16',
+      'Concept': '12–16',
+      'Bionic': '12–16',
+      'Spot On - Dark blue / Blue / Gold': '10–15',
+      'Blue / Orange / Silver': '8–15'
+    };
+
+    document.querySelectorAll('.balls-grid .product-info').forEach((card) => {
+      const name = card.querySelector('h3')?.textContent.trim();
+      const weight = weightsByBall[name];
+      if (!weight) return;
+
+      let details = card.querySelector('.product-details');
+
+      if (!details) {
+        details = document.createElement('div');
+        details.className = 'product-details';
+        card.querySelector('.price').before(details);
+      }
+
+      let label = Array.from(details.querySelectorAll('span')).find(
+        (span) => /\blbs?\.?$/i.test(span.textContent.trim())
+      );
+
+      if (!label) {
+        label = document.createElement('span');
+        details.append(label);
+      }
+
+      label.textContent = 'Þyngdir: ' + weight + ' lbs';
+    });
+  })();
+</script>
