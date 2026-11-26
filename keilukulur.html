@@ -8,6 +8,45 @@
   <title>Keilukúlur | Keilusjoppan</title>
 
   <link rel="stylesheet" href="style.css">
+<style>
+  .ball-order-guide {
+    max-width: 650px;
+    margin-top: 2rem;
+    line-height: 1.6;
+  }
+
+  .ball-inquiry-link {
+    display: inline-block;
+    align-self: flex-start;
+    margin-top: 0.75rem;
+    padding: 0.65rem 1rem;
+    border-radius: 6px;
+    background: #202020;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .ball-inquiry-link:hover,
+  .ball-inquiry-link:focus-visible {
+    background: #414141;
+    color: #fff;
+  }
+
+  .ball-order-guide ol {
+    padding-inline-start: 1.4rem;
+  }
+
+  .ball-order-guide li + li {
+    margin-top: 0.5rem;
+  }
+
+  .ball-order-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+</style>
 </head>
 
 <body>
@@ -33,25 +72,20 @@
 
   <h1>KEILUKÚLUR</h1>
 
-  <p>
-    Við bjóðum upp á pöntun á öllum keilukúlum frá Storm, Roto Grip og 900 Global. Einnig bjóðum við upp á valdar kúlur frá Pro Bowl.
-    Við hjálpum þér að finna réttu kúluna fyrir þinn leik og
-    sjáum um pöntun og faglega keilukúluborun.
-  </p>
-
-  <a class="balls-catalog-link"
-     href="https://www.stormbowling.com/products/equipment/bowling-balls/"
-     target="_blank"
-     rel="noopener">
-    SKOÐA ALLAR KÚLUR Í BOÐI →
-  </a>
+  <section class="ball-order-guide" aria-labelledby="ball-order-guide-title">
+    <h2 id="ball-order-guide-title">Svona pantar þú keilukúlu</h2>
+    <ol>
+      <li><strong>Veldu kúlu</strong> sem þér líst á og sendu okkur pöntunarfyrirspurn.</li>
+      <li><strong>Ræddu við Hafþór.</strong> Hann fer yfir hvort kúlan henti þínum leik og hjálpar þér að velja þyngd og borun.</li>
+      <li><strong>Sæktu og greiddu.</strong> Við staðfestum pöntunina með þér og þú greiðir þegar þú sækir kúluna.</li>
+    </ol>
+  </section>
 </section>
 
   <section class="balls-shop">
 
     <div class="balls-shop-heading">
-<p class="eyebrow">VALDAR KÚLUR</p>
-<h2>Okkar meðmæli</h2>
+      <h2>Okkar meðmæli</h2>
       <p>
         <strong>Borun er innifalin í öllum verðum.</strong>
         Veittur er 3.000 kr. afsláttur af verðinu við tveggja handa borun.
@@ -333,24 +367,20 @@
     </div>
   </section>
 <section class="ball-order-cta">
-
-  <p class="eyebrow">ALLAR KÚLUR Í BOÐI</p>
-
-  <h2>FINNURÐU EKKI<br>KÚLUNA SEM ÞIG VANTAR?</h2>
+  <h2>Finnurðu ekki kúluna sem þig vantar?</h2>
 
   <p class="ball-order-text">
-    Sérðu ekki kúluna sem þú ert að leita að?
-    Veldu kúlu úr vörulistanum og við pöntum
-    draumakúluna fyrir þig.
+    Við getum líka pantað aðrar kúlur frá Storm, Roto Grip og 900 Global.
+    Ef þú ert óviss um hvað hentar þér hjálpar Hafþór þér að velja.
   </p>
 
-  <a class="ball-order-button"
-     href="https://www.stormbowling.com/products/equipment/bowling-balls/"
-     target="_blank"
-     rel="noopener">
-    FINNDU DRAUMAKÚLUNA →
-  </a>
-
+  <div class="ball-order-actions">
+    <a class="ball-order-button"
+       href="https://www.stormbowling.com/products/equipment/bowling-balls/"
+       target="_blank" rel="noopener">Skoða allar kúlur í boði</a>
+    <a class="ball-order-button"
+       href="mailto:keilusjoppan@gmail.com?subject=R%C3%A1%C3%B0gj%C3%B6f%20um%20val%20%C3%A1%20keiluk%C3%BAlu">Fá ráðgjöf hjá Hafþóri</a>
+  </div>
 </section>
 </main>
 
@@ -358,32 +388,6 @@
   <span>KEILUSJOPPAN</span>
   <span>ALLT FYRIR KEILARANN</span>
 </footer>
-
-</body>
-</html>
-<style>
-  .ball-order-guide {
-    margin: 1.25rem 0;
-  }
-
-  .ball-inquiry-link {
-    display: inline-block;
-    align-self: flex-start;
-    margin-top: 0.75rem;
-    padding: 0.65rem 1rem;
-    border-radius: 6px;
-    background: #202020;
-    color: #fff;
-    font-weight: 700;
-    text-decoration: none;
-  }
-
-  .ball-inquiry-link:hover,
-  .ball-inquiry-link:focus-visible {
-    background: #414141;
-    color: #fff;
-  }
-</style>
 
 <script>
   const orderEmail = 'keilusjoppan@gmail.com';
@@ -399,17 +403,6 @@
   const ballGrid = document.querySelector('.balls-grid');
 
   if (ballGrid) {
-    const guide = document.createElement('section');
-    guide.className = 'ball-order-guide';
-    guide.innerHTML = `
-      <h2>Svona pantar þú keilukúlu</h2>
-      <p>Þegar þú finnur kúlu sem þér líst á skaltu senda okkur
-      pöntunarfyrirspurn. Hafþór fer yfir með þér hvort kúlan henti
-      þínum leik og ræðir við þig um þyngd og borun. Við staðfestum
-      svo pöntunina með þér og þú greiðir þegar þú sækir kúluna.</p>
-    `;
-    ballGrid.before(guide);
-
     ballGrid.querySelectorAll('.product-info').forEach((info) => {
       const name = info.querySelector('h3');
       const brand = info.querySelector('.product-brand');
@@ -432,16 +425,6 @@
     });
   }
 
-  const adviceSection = document.querySelector('.ball-order-cta');
-
-  if (adviceSection) {
-    const row = document.createElement('div');
-    row.append(createInquiryLink(
-      'Fá ráðgjöf hjá Hafþóri',
-      'Ráðgjöf um val á keilukúlu'
-    ));
-    adviceSection.append(row);
-  }
 </script>
 <script>
   (() => {
@@ -485,3 +468,5 @@
     });
   })();
 </script>
+</body>
+</html>
