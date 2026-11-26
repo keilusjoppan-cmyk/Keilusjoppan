@@ -2,14 +2,14 @@ const products = [
   {
     name: "Storm Tropical Surge – Kiwi",
     category: "Kúlur",
-    price: "Hafðu samband",
+    price: "35.000 kr.",
     inStock: true,
     image: "storm-tropical-surge-kiwi.png"
   },
   {
     name: "Roto Grip Hustle VP",
     category: "Kúlur",
-    price: "Hafðu samband",
+    price: "36.000 kr.",
     inStock: true,
     image: "roto-grip-hustle-vp.png"
   },
