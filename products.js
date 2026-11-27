@@ -16,14 +16,14 @@ const products = [
   {
     name: "Dexter SST 6 Hybrid BOA",
     category: "Skór",
-    price: "Hafðu samband",
+    price: "37.000 kr.",
     inStock: true,
     image: "dexter-sst6-hybrid-boa.png"
   },
   {
     name: "Dexter Pro BOA Off White",
     category: "Skór",
-    price: "Hafðu samband",
+    price: "21.000 kr.",
     inStock: true,
     image: "dexter-pro-boa-off-white.png"
   },
