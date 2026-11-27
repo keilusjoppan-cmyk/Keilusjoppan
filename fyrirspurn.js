@@ -165,7 +165,13 @@
       status.textContent = name + ' bætt við (' + (item?.quantity || 1) + ').';
     });
     add.setAttribute('aria-label', 'Bæta við fyrirspurn: ' + name);
-    info.append(add);
+        const oldLink = info.querySelector('.product-button, .product-link');
+
+    if (oldLink && ['keiluskór.html', 'keilutoskur.html', 'fylgihlutir.html'].includes(page)) {
+      oldLink.replaceWith(add);
+    } else {
+      info.append(add);
+    }
   });
 
   function refreshSelection() {
