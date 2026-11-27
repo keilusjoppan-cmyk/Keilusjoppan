@@ -163,6 +163,14 @@
         selection.push({ id, name, category: itemCategory, quantity: 1 });
       }
       saveSelection();
+            add.textContent = '✓ Bætt við fyrirspurn';
+      add.setAttribute('aria-label', 'Bætt við fyrirspurn: ' + name);
+
+      clearTimeout(confirmationTimer);
+      confirmationTimer = setTimeout(() => {
+        add.textContent = 'Bæta við fyrirspurn';
+        add.setAttribute('aria-label', 'Bæta við fyrirspurn: ' + name);
+      }, 2000);
       status.textContent = name + ' bætt við (' + (item?.quantity || 1) + ').';
     });
     add.setAttribute('aria-label', 'Bæta við fyrirspurn: ' + name);
