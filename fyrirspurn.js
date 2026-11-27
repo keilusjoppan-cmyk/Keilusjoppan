@@ -42,11 +42,12 @@
   const bar = element('div', '', 'inquiry-bar');
   const status = element('span', '', 'inquiry-status');
   status.setAttribute('role', 'status');
-  const open = button('Fyrirspurnin mín (0)', () => {
+  function openInquiry() {
     selection = loadSelection();
     renderList();
     dialog.showModal();
-  });
+  }
+  const open = button('Fyrirspurnin mín (0)', openInquiry);
   bar.append(status, open);
   document.querySelector('header').after(bar);
 
@@ -65,9 +66,32 @@
   dialog.append(heading, empty, list, instructions, message);
   document.body.append(dialog);
 
+  const notice = element('div', '', 'inquiry-notice');
+  notice.hidden = true;
+  const noticeLink = button('Fyrirspurnin mín (0)', openInquiry);
+  notice.append(element('strong', '✓ Vöru bætt við'), noticeLink);
+  document.body.append(notice);
+  let noticeTimer;
+
+  function showNotice() {
+    notice.hidden = false;
+    clearTimeout(noticeTimer);
+    noticeTimer = setTimeout(() => {
+      if (document.activeElement !== noticeLink && !dialog.open) notice.hidden = true;
+    }, 7000);
+  }
+
+  dialog.addEventListener('close', () => {
+    if (!notice.hidden) showNotice();
+  });
+
+  noticeLink.addEventListener('blur', () => {
+    if (!dialog.open) notice.hidden = true;
+  });
+
   function updateCount() {
     const count = selection.reduce((total, item) => total + item.quantity, 0);
-    open.textContent = 'Fyrirspurnin mín (' + count + ')';
+    open.textContent = noticeLink.textContent = 'Fyrirspurnin mín (' + count + ')';
   }
 
   function updateEmail() {
@@ -153,7 +177,7 @@
     const id = card.querySelector('.product-image img')?.getAttribute('src') || name;
     const featuredCategory = info.querySelector('.product-meta span')?.textContent.trim();
     const itemCategory = category || ({ 'Skór': 'shoes', 'Kúlur': 'balls' })[featuredCategory] || '';
-        let confirmationTimer;
+    let confirmationTimer;
     const add = button('Bæta við fyrirspurn', () => {
       selection = loadSelection();
       const item = selection.find(entry => entry.id === id);
@@ -163,7 +187,7 @@
         selection.push({ id, name, category: itemCategory, quantity: 1 });
       }
       saveSelection();
-            add.textContent = '✓ Bætt við fyrirspurn';
+      add.textContent = '✓ Bætt við fyrirspurn';
       add.setAttribute('aria-label', 'Bætt við fyrirspurn: ' + name);
 
       clearTimeout(confirmationTimer);
@@ -171,10 +195,11 @@
         add.textContent = 'Bæta við fyrirspurn';
         add.setAttribute('aria-label', 'Bæta við fyrirspurn: ' + name);
       }, 2000);
-      status.textContent = name + ' bætt við (' + (item?.quantity || 1) + ').';
+      status.textContent = name + ' bætt við. Opnaðu Fyrirspurnin mín til að sjá listann.';
+      showNotice();
     });
     add.setAttribute('aria-label', 'Bæta við fyrirspurn: ' + name);
-        const oldLink = info.querySelector('.product-button, .product-link');
+    const oldLink = info.querySelector('.product-button, .product-link');
 
     if (oldLink && ['keiluskór.html', 'keilutoskur.html', 'fylgihlutir.html'].includes(page)) {
       oldLink.replaceWith(add);

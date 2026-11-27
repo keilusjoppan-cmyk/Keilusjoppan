@@ -108,3 +108,25 @@
 .inquiry-dialog [hidden] {
   display: none;
 }
+
+.inquiry-notice {
+  position: fixed;
+  z-index: 20;
+  top: max(1rem, env(safe-area-inset-top));
+  right: 1rem;
+  max-width: calc(100% - 2rem);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .65rem;
+  padding: .75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 18px rgb(0 0 0 / .16);
+  background: #fff;
+  color: #222;
+}
+
+.inquiry-notice[hidden] {
+  display: none;
+}
