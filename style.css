@@ -1516,3 +1516,24 @@ header .brand img {
 .product-button, .product-link {
   display: none !important;
 }
+/* Forsíða – mynd hægra megin í hausnum */
+.hero {
+  min-height: 440px;
+  background-image:
+    linear-gradient(90deg, #111 34%, rgb(17 17 17 / 55%) 58%, transparent 85%),
+    url("./keilusjoppan-hero.png") !important;
+  background-size: cover, auto 100%;
+  background-position: center, right center;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 700px) {
+  .hero {
+    min-height: 0;
+    background-image:
+      linear-gradient(90deg, rgb(17 17 17 / 95%), rgb(17 17 17 / 72%)),
+      url("./keilusjoppan-hero.png") !important;
+    background-size: cover;
+    background-position: center, 68% center;
+  }
+}
