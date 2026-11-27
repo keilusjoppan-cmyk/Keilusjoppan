@@ -153,6 +153,7 @@
     const id = card.querySelector('.product-image img')?.getAttribute('src') || name;
     const featuredCategory = info.querySelector('.product-meta span')?.textContent.trim();
     const itemCategory = category || ({ 'Skór': 'shoes', 'Kúlur': 'balls' })[featuredCategory] || '';
+        let confirmationTimer;
     const add = button('Bæta við fyrirspurn', () => {
       selection = loadSelection();
       const item = selection.find(entry => entry.id === id);
