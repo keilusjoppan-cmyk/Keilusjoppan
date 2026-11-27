@@ -46,6 +46,14 @@
     flex-wrap: wrap;
     gap: 0.75rem;
   }
+  #valdar-kulur,
+  #tilbodskulur {
+    scroll-margin-top: 8rem;
+  }
+
+  #tilbodskulur {
+    margin-top: 3.5rem;
+  }
 </style>
 </head>
 
@@ -93,21 +101,15 @@
       </p>
     </div>
 
+    <div class="shoe-nav" role="group" aria-label="Flokkar keilukúlna">
+      <a href="#valdar-kulur">VALDAR KÚLUR</a>
+      <a href="#tilbodskulur">TILBOÐSKÚLUR</a>
+    </div>
+
+    <div class="shoe-category-heading" id="valdar-kulur">
+      <h3>VALDAR KÚLUR</h3>
+    </div>
     <div class="balls-grid">
-
-<article class="product-card">
-  <div class="product-image">
-    <span class="product-badge">TILBOÐ</span>
-    <img src="storm-next-factor.png" alt="Storm Next Factor keilukúla">
-  </div>
-
-  <div class="product-info">
-    <span class="product-brand">STORM</span>
-    <h3>Next Factor</h3>
-    <p class="product-description">Kúla með R3S Pearl Reactive yfirborði og ósamhverfum RAD-TQ kjarna.</p>
-    <p class="price">Tilboðsverð 35.000 kr.</p>
-  </div>
-</article>
 
 <article class="product-card">
   <div class="product-image">
@@ -365,6 +367,25 @@
   </div>
 </article>
     </div>
+
+    <div class="shoe-category-heading" id="tilbodskulur">
+      <h3>TILBOÐSKÚLUR</h3>
+    </div>
+    <div class="balls-grid">
+<article class="product-card">
+  <div class="product-image">
+    <span class="product-badge">TILBOÐ</span>
+    <img src="storm-next-factor.png" alt="Storm Next Factor keilukúla">
+  </div>
+
+  <div class="product-info">
+    <span class="product-brand">STORM</span>
+    <h3>Next Factor</h3>
+    <p class="product-description">Kúla með R3S Pearl Reactive yfirborði og ósamhverfum RAD-TQ kjarna.</p>
+    <p class="price">Tilboðsverð 35.000 kr.</p>
+  </div>
+</article>
+    </div>
   </section>
 <section class="ball-order-cta">
   <h2>Finnurðu ekki kúluna sem þig vantar?</h2>
@@ -400,10 +421,10 @@
     return link;
   }
 
-  const ballGrid = document.querySelector('.balls-grid');
+  const ballShop = document.querySelector('.balls-shop');
 
-  if (ballGrid) {
-    ballGrid.querySelectorAll('.product-info').forEach((info) => {
+  if (ballShop) {
+    ballShop.querySelectorAll('.balls-grid .product-info').forEach((info) => {
       const name = info.querySelector('h3');
       const brand = info.querySelector('.product-brand');
       const price = info.querySelector('.price');
